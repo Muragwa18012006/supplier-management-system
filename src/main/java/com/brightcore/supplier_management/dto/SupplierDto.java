@@ -3,6 +3,7 @@ package com.brightcore.supplier_management.dto;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
+import java.time.LocalDateTime;
 
 public class SupplierDto {
 
@@ -27,6 +28,18 @@ public class SupplierDto {
 
         @NotBlank(message = "Address is required")
         private String address;
+
+        @NotBlank(message = "Supplier code is required")
+        private String supplierCode;
+
+        @NotBlank(message = "Contact person is required")
+        private String contactPerson;
+
+        @NotBlank(message = "Status is required")
+        private String status;
+
+        @NotBlank(message = "Supplied product is required")
+        private String suppliedProduct;
     }
 
     @Getter
@@ -47,5 +60,17 @@ public class SupplierDto {
         private String company;
 
         private String address;
+
+        private String supplierCode;
+
+        private String contactPerson;
+
+        private String status;
+
+        private String suppliedProduct;
+
+        private LocalDateTime createdAt;
+
+        private LocalDateTime updatedAt;
     }
 }

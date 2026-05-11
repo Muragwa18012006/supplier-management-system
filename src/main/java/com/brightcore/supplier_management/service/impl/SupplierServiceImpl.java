@@ -26,6 +26,10 @@ public class SupplierServiceImpl implements SupplierService {
                 .phone(request.getPhone())
                 .company(request.getCompany())
                 .address(request.getAddress())
+                .supplierCode(request.getSupplierCode())
+                .contactPerson(request.getContactPerson())
+                .status(request.getStatus())
+                .suppliedProduct(request.getSuppliedProduct())
                 .build();
 
         Supplier savedSupplier = supplierRepository.save(supplier);
@@ -44,6 +48,12 @@ public class SupplierServiceImpl implements SupplierService {
                 .phone(savedSupplier.getPhone())
                 .company(savedSupplier.getCompany())
                 .address(savedSupplier.getAddress())
+                .supplierCode(savedSupplier.getSupplierCode())
+                .contactPerson(savedSupplier.getContactPerson())
+                .status(savedSupplier.getStatus())
+                .suppliedProduct(savedSupplier.getSuppliedProduct())
+                .createdAt(savedSupplier.getCreatedAt())
+                .updatedAt(savedSupplier.getUpdatedAt())
                 .build();
     }
 
@@ -60,6 +70,12 @@ public class SupplierServiceImpl implements SupplierService {
                 .phone(supplier.getPhone())
                 .company(supplier.getCompany())
                 .address(supplier.getAddress())
+                .supplierCode(supplier.getSupplierCode())
+                .contactPerson(supplier.getContactPerson())
+                .status(supplier.getStatus())
+                .suppliedProduct(supplier.getSuppliedProduct())
+                .createdAt(supplier.getCreatedAt())
+                .updatedAt(supplier.getUpdatedAt())
                 .build();
     }
 
@@ -74,6 +90,10 @@ public class SupplierServiceImpl implements SupplierService {
         supplier.setPhone(request.getPhone());
         supplier.setCompany(request.getCompany());
         supplier.setAddress(request.getAddress());
+        supplier.setSupplierCode(request.getSupplierCode());
+        supplier.setContactPerson(request.getContactPerson());
+        supplier.setStatus(request.getStatus());
+        supplier.setSuppliedProduct(request.getSuppliedProduct());
 
         Supplier updatedSupplier = supplierRepository.save(supplier);
         SupplierEvent event = SupplierEvent.builder()
@@ -91,6 +111,12 @@ public class SupplierServiceImpl implements SupplierService {
                 .phone(updatedSupplier.getPhone())
                 .company(updatedSupplier.getCompany())
                 .address(updatedSupplier.getAddress())
+                .supplierCode(updatedSupplier.getSupplierCode())
+                .contactPerson(updatedSupplier.getContactPerson())
+                .status(updatedSupplier.getStatus())
+                .suppliedProduct(updatedSupplier.getSuppliedProduct())
+                .createdAt(updatedSupplier.getCreatedAt())
+                .updatedAt(updatedSupplier.getUpdatedAt())
                 .build();
     }
 

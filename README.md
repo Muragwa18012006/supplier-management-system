@@ -59,7 +59,11 @@ POST `/api/v1/suppliers/add`
   "email": "abc@gmail.com",
   "phone": "0788888888",
   "company": "ABC Ltd",
-  "address": "Kigali"
+  "address": "Kigali",
+  "supplierCode":"cd1234",
+  "contactPerson": "joe frank",
+  "status": "Active",
+  "suppliedProduct": "Rice"
 }
 ```
 
