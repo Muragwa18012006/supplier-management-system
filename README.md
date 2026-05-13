@@ -145,6 +145,47 @@ docker build -t supplier-management .
 
 ---
 
+# Running the Project
+
+## Prerequisites
+
+- Java 26
+- PostgreSQL
+- Apache Kafka
+- Docker Desktop
+
+## Clone Repository
+
+```bash
+git clone https://github.com/Muragwa18012006/supplier-management-system.git
+```
+
+## Build Application
+
+```bash
+.\mvnw.cmd clean package -DskipTests
+```
+
+## Run Application
+
+```bash
+.\mvnw.cmd spring-boot:run
+```
+
+## Swagger Documentation
+
+http://localhost:8080/swagger-ui.html
+
+## Docker Run
+
+```bash
+docker build -t supplier-management .
+
+docker run -p 9090:8080 supplier-management
+```
+
+Docker Swagger:
+http://localhost:9090/swagger-ui.html
 # Author
 
 Muragwa Hirwa Christian
